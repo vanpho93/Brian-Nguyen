@@ -30,7 +30,7 @@ router.get("/todos", async (req, res) => {
   };
 
   const orderConditions = sort
-    ? { [sort as string]: "ASC" }
+    ? { [sort as string]: "DESC" }
     : {};
 
   const todos = await todoRepository.find({
